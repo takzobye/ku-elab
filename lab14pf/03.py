@@ -1,5 +1,13 @@
-abc = [1, 2, 3, 4, 5]
-for char in abc:
-    char = char * 2
+"""first way not use math"""
+# x = input()
+# num = int(input())
+# majors = x.split(',')
+# majors += (majors[1:] * num)
+# print(majors[num - 1])
 
-print(abc)
+"""second way use math"""
+x = input()
+num = int(input())
+majors = x.split(',')
+target = (num - 1) % 7
+print(majors[:len(majors)][target])
