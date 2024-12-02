@@ -23,4 +23,6 @@ int main() {
 
         printf("%.2f", tax);
     }
+
+    return 0;
 }

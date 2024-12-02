@@ -44,4 +44,6 @@ int main()
     printf("You get %d percents discount.\n", discount);
     printf("Total amount due is %.2f Baht.\n", amount * (1 - (discount / 100.0)));
     printf("And you have %d stickers left.", stamp_left);
+
+    return 0;
 }
