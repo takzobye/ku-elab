@@ -4,7 +4,10 @@
 long long gcd(long long m, long long n)
 {
     if (m % n == 0)
+    {
         return n;
+    }
+
     return gcd(n, m % n);
 }
 
