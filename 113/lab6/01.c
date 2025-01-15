@@ -1,29 +1,26 @@
 #include <stdio.h>
-#define ARRAY_SIZE 98
+#include <stdlib.h>
 
 int main() {
-    int i, j;
-    int A[ARRAY_SIZE] = {0};
+    int hour, minute;
+    char unit[3];
 
-    for (i = 2; i < ARRAY_SIZE; i++)
-        A[i] = 1;
+    printf("Enter a 12-hour time [eg. 12:34 am]: ");
+    scanf("%d:%d %2s", &hour, &minute, unit);
 
-    // Loop to clean array
-    for (i = 2; i < ARRAY_SIZE; i++) {
-        if (A[i] == 1) {
-            for (j = i; (j) < ARRAY_SIZE; j += i) {
-                if (j != i) {
-                    A[j] = 0;
-                }
-            }
+    if (unit[0] == 'a' || unit[0] == 'A') {
+        if (hour == 12) {
+            printf("Equivalent 24-hour time: 00:%02d", minute);
+        } else {
+            printf("Equivalent 24-hour time: %02d:%02d", hour, minute);
+        }
+    } else {
+        if (hour == 12) {
+            printf("Equivalent 24-hour time: 12:%02d", minute);
+        } else {
+            printf("Equivalent 24-hour time: %02d:%02d", hour + 12, minute);
         }
     }
-
-    for (i = 2; i < ARRAY_SIZE; i++)
-        if (A[i])
-            printf("%d ", i);
-
-    printf("\n");
 
     return 0;
 }
