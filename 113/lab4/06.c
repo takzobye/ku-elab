@@ -32,4 +32,6 @@ int main()
     }
 
     printf("Congratulations! You take %d %s to reach your goal.", day_count, day_count == 1 ? "day" : "days");
+
+    return 0;
 }
