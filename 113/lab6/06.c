@@ -1,3 +1,10 @@
+/*
+
+ให้เติมส่วนของโปรแกรมที่มีการเก็บข้อความ "Computer Programming"
+และให้โปรแกรมแสดงข้อความตามตัวอย่าง โดยใช้หลักการของ pointer
+
+*/
+
 #include <stdio.h>
 int main() {
     char item[25] = "Computer Programming";
