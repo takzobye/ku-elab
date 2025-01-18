@@ -22,7 +22,7 @@ int remove_vowel(char *str) {
                 str[j] = str[j + 1];
             }
 
-            i--; // this line help to solve when vowels tid gun
+            i--; // this line help to solve when consecutive vowels b/c will check new str that instead vowels
         }
     }
 
